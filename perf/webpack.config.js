@@ -1,7 +1,6 @@
 'use strict'
 
 const path = require('path')
-const loader = require.resolve('..')
 
 module.exports = {
   context: path.join(__dirname),
@@ -18,7 +17,7 @@ module.exports = {
         test: /\.(scss|sass)$/,
         use: [
           'fast-css-loader',
-          process.env.SASS_LOADER === 'sass-loader' ? 'sass-loader' : loader
+          'sass-loader'
         ]
       },
       {
